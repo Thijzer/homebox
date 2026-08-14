@@ -64,10 +64,15 @@ IMAGE=ghcr.io/thijzer/homebox:v1.2.3 ./scripts/build-qcow2.sh
 ```
 
 `build-qcow2.sh` accepts the `IMAGE` environment variable and passes that
-reference to bootc-image-builder. The script also transfers a rootless image
-into rootful Podman storage when needed, because the image builder runs as
-root. This keeps the QCOW2 tied to the exact release that was tested; no
-retagging is required.
+reference to bootc-image-builder. The script also transfers the rootless
+image into rootful Podman storage because the image builder runs as root. The
+resulting QCOW2 is tied to the exact release that was tested; no retagging is
+required.
+
+A QCOW2 built this way is installed with the GHCR image as its bootc source,
+so a newly created VM does not need a separate initial `bootc switch`. For a
+moving channel, use `IMAGE=ghcr.io/thijzer/homebox:stable`; prefer an exact
+version tag for production and record the resulting image digest.
 
 Do not run `deploy-proxmox.sh --replace` as part of an unattended release.
 It deliberately requires an explicit flag and confirmation. Prefer a fresh
