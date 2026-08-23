@@ -1,0 +1,14 @@
+services:
+  deepseek-harness:
+    image: smanx/deepseek-harness:${DSH_IMAGE_TAG}
+    container_name: ${DSH_CONTAINER_NAME}
+    restart: unless-stopped
+    ports:
+      - "${DSH_PROXY_HOST_PORT}:${DSH_PROXY_PORT}"
+    environment:
+      DSH_PORT: ${DSH_PORT}
+      PROXY_PORT: ${DSH_PROXY_PORT}
+      PROXY_USERNAME: ${DSH_PROXY_USERNAME}
+      PROXY_PASSWORD: ${DSH_PROXY_PASSWORD}
+    volumes:
+      - ${DSH_DATA_PATH}:/root/.dsh

@@ -1,0 +1,7 @@
+{
+  "name": "DeepSeek Harness",
+  "description": "DeepSeek Harness (DSH) agent harness with a built-in reverse proxy for LAN access.",
+  "version": "1.0.0",
+  "author": "thijzer",
+  "tags": ["ai", "deepseek", "agent", "harness"]
+}
