@@ -2,7 +2,7 @@
   "$schema": "https://github.com/getarcaneapp/templates/schema.json",
   "name": "Homebox Templates",
   "description": "Docker Compose templates for the Homebox self-hosting appliance.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "thijzer",
   "url": "https://github.com/Thijzer/homebox/tree/master/arcane-templates",
   "templates": [
@@ -15,7 +15,7 @@
       "compose_url": "https://raw.githubusercontent.com/Thijzer/homebox/master/arcane-templates/templates/deepseek-harness/compose.yaml",
       "env_url": "https://raw.githubusercontent.com/Thijzer/homebox/master/arcane-templates/templates/deepseek-harness/.env.example",
       "documentation_url": "https://github.com/Thijzer/homebox/tree/master/arcane-templates/templates/deepseek-harness",
-      "content_hash": "a384040dbf04b01d1245095495119d88ef10e0ab7733899fdc99fb3ac2c18af9",
+      "content_hash": "5aab0791c1302e4c8ab880a001267bcb708401ebfc88953907cb5ffb3dccde1f",
       "tags": [
         "ai",
         "deepseek",
@@ -71,6 +71,23 @@
         "audio",
         "streaming",
         "home-assistant"
+      ]
+    },
+    {
+      "id": "obsidian-server",
+      "name": "Obsidian Server",
+      "description": "MCP server that exposes two Obsidian vaults (home, work) for LLM file operations and git sync against GitHub.",
+      "version": "1.0.0",
+      "author": "thijzer",
+      "compose_url": "https://raw.githubusercontent.com/Thijzer/homebox/master/arcane-templates/templates/obsidian-server/compose.yaml",
+      "env_url": "https://raw.githubusercontent.com/Thijzer/homebox/master/arcane-templates/templates/obsidian-server/.env.example",
+      "documentation_url": "https://github.com/Thijzer/homebox/tree/master/arcane-templates/templates/obsidian-server",
+      "content_hash": "7f38a383d82131acb268ab69ba62e2f2cbbee5234a40af3b4a1f664b6a13d505",
+      "tags": [
+        "obsidian",
+        "notes",
+        "mcp",
+        "knowledge-base"
       ]
     },
     {

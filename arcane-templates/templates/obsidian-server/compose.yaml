@@ -1,0 +1,17 @@
+services:
+  obsidian-server:
+    image: docker.io/thijs/obsidian-server:${OBSIDIAN_SERVER_IMAGE_TAG}
+    container_name: ${OBSIDIAN_SERVER_CONTAINER_NAME}
+    environment:
+      VAULTS: ${VAULTS}
+      GH_TOKEN: ${GH_TOKEN}
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN}
+      LOG_LEVEL: ${LOG_LEVEL}
+    ports:
+      - "127.0.0.1:${MCP_PORT}:8080"
+    volumes:
+      - vaults-data:/vaults
+    restart: unless-stopped
+
+volumes:
+  vaults-data:

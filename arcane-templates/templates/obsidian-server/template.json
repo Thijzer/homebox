@@ -1,0 +1,7 @@
+{
+  "name": "Obsidian Server",
+  "description": "MCP server that exposes two Obsidian vaults (home, work) for LLM file operations and git sync against GitHub.",
+  "version": "1.0.0",
+  "author": "thijzer",
+  "tags": ["obsidian", "notes", "mcp", "knowledge-base"]
+}
