@@ -1,0 +1,18 @@
+services:
+  fam-plan:
+    image: docker.io/thijs/fam-plan:${FAM_PLAN_IMAGE_TAG}
+    container_name: ${FAM_PLAN_CONTAINER_NAME}
+    environment:
+      APP_ENV: prod
+      APP_DEBUG: 0
+      APP_SECRET: ${APP_SECRET}
+      DATABASE_URL: sqlite:////app/var/data/app.db
+      MCP_API_TOKEN: ${MCP_API_TOKEN}
+      MESSENGER_TRANSPORT_DSN: ${MESSENGER_TRANSPORT_DSN}
+      SYMFONY_TRUSTED_PROXIES: ${SYMFONY_TRUSTED_PROXIES}
+      MAX_REQUESTS: ${MAX_REQUESTS}
+    volumes:
+      - ${FAM_PLAN_DATA_PATH}:/app/var/data
+    ports:
+      - "${FAM_PLAN_PORT}:80"
+    restart: unless-stopped

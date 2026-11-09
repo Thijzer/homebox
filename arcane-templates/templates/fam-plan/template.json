@@ -1,0 +1,7 @@
+{
+  "name": "Fam Plan",
+  "description": "Shared household finance planner with transaction import, budgets, goals, and a token-protected MCP endpoint for agents.",
+  "version": "1.0.0",
+  "author": "thijzer",
+  "tags": ["finance", "budgeting", "household", "mcp"]
+}
